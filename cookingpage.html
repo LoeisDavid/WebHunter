@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hunter Academy — Cooking</title>
+    <link rel="stylesheet" href="cookingpage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+
+    <!-- ==============================
+         NAVBAR
+    ============================== -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar-logo" id="navbar-logo">
+        <img src="HomeAssets/Logo.png" alt="Hunter Community Logo" />
+      </div>
+      <ul class="navbar-links">
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="codingpage.html">Academy</a></li>
+        <li><a href="cookingpage.html"  class="active">Entrepreneur</a></li>
+      </ul>
+    </nav>
+
+    <!-- ==============================
+         HERO SECTION
+    ============================== -->
+    <section class="hero">
+      <div class="hero-content">
+        <p class="hero-tag reveal">- Division 2.0</p>
+        <h1 class="hero-title reveal reveal-delay-1">
+          <span class="accent-green">VILLA</span><br />
+          COOKIES
+        </h1>
+        <p class="hero-description reveal reveal-delay-2">
+          Villa Cookies adalah ruang kreatif kuliner yang dibangun untuk menghadirkan cookies berkualitas dengan rasa yang konsisten, harga yang terjangkau, dan proses produksi yang higienis. Di sini, setiap produk bukan cuma dibuat untuk enak, tapi juga untuk menjaga standar, karakter, dan identitas tim yang bekerja di baliknya.
+        </p>
+      </div>
+
+      <div class="hero-image-wrapper reveal reveal-right reveal-delay-1">
+        <img
+          src="CookingAssets/FotoCookies.png"
+          alt="Villa Cookies"
+          class="hero-image"
+        />
+      </div>
+    </section>
+
+        <!-- ==============================
+         OUR PRODUCT
+    ============================== -->
+    <section class="our-product">
+  <div class="product-header reveal">
+    <p class="product-eyebrow">OUR PRODUCT</p>
+  </div>
+
+  <div class="product-carousel-wrap reveal reveal-delay-1">
+    <button class="product-arrow product-arrow-left" id="productPrev" aria-label="Sebelumnya">
+      <span>‹</span>
+    </button>
+
+    <div class="product-viewport">
+      <div class="product-track" id="productTrack"></div>
+    </div>
+
+    <button class="product-arrow product-arrow-right" id="productNext" aria-label="Berikutnya">
+      <span>›</span>
+    </button>
+  </div>
+
+  <div class="product-dots reveal reveal-delay-2" id="productDots"></div>
+</section>
+
+    <!-- ==============================
+         OUR ADVENTURE
+    ============================== -->
+    <section class="adventure">
+      <h2 class="adventure-title reveal">
+        <span class="accent-white">OUR</span> ADVENTURE
+      </h2>
+
+      <div class="adventure-cards">
+        <div class="adventure-card reveal reveal-delay-1">
+          <div class="card-label border-red">Proses <strong>mixing</strong> <em>cookies class</em></div>
+          <img src="CookingAssets/FotoProsesBaking.png" alt="Proses Mixing Cookies" />
+        </div>
+
+        <div class="adventure-card reveal reveal-delay-2">
+          <img src="CookingAssets/FotoRapatMingguan.png" alt="Meeting Mingguan" />
+          <div class="card-label border-green"><em><strong>Meeting</strong></em> mingguan tim cookies</div>
+        </div>
+
+        <div class="adventure-card reveal reveal-delay-3">
+          <div class="card-label border-blue">Diskusi <em><strong>planning</strong></em> untuk marketing produk</div>
+          <img src="CookingAssets/FotoDiskusiPlanning.png" alt="Diskusi Planning" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         THE MINDS
+    ============================== -->
+
+<section class="the-minds">
+  <div class="the-minds-header reveal">
+    <p class="the-minds-eyebrow">- Get To Know -</p>
+    <h2 class="the-minds-title">The Makers</h2>
+  </div>
+
+  <div class="the-minds-grid" id="makersGrid"></div>
+</section>
+
+    <!-- ==============================
+         FOOTER
+    ============================== -->
+    <footer class="footer">
+      <img src="CookingAssets/Logo3.png" alt="Hunter Community" class="reveal reveal-delay-2 footer-logo" />
+
+      <div class="footer-inner">
+        <h2 class="reveal reveal-delay-1">Let's Build it Together.</h2>
+
+        <div class="footer-inner-content">
+          <div class="footer-visitus">
+            <h4 class="reveal reveal-delay-3">Visit Us</h4>
+            <p class="reveal reveal-delay-4">Wonorejo Permai Utara <br>VII Blok BB no.423 <br>Surabaya</p>
+          </div>
+
+          <div class="footer-contact">
+            <h4 class="reveal reveal-delay-3">Contact</h4>
+
+            <div class="contact-sosmed">
+              <img src="CookingAssets/WhatsAppIcon.png" alt="WhatsApp" class="reveal reveal-delay-4">
+              <div class="contact reveal reveal-delay-5">
+                <p>929-6000 ( Hunter Community )</p>
+                <p>929-6000 ( Villa Cookies )</p>
+              </div>
+            </div>
+
+            <div class="contact-sosmed">
+              <img src="CookingAssets/InstagramIcon.png" alt="Instagram" class="reveal reveal-delay-4">
+              <div class="contact reveal reveal-delay-5">
+                <p>huntercommunity_</p>
+                <p>villacookies</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // ============================
+      // SCROLL REVEAL
+      // ============================
+      const reveals = document.querySelectorAll(".reveal");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        {
+          threshold: 0.12,
+          rootMargin: "0px 0px -40px 0px",
+        }
+      );
+
+      reveals.forEach((el) => observer.observe(el));
+
+      window.addEventListener("load", () => {
+        document.querySelectorAll(".hero .reveal").forEach((el) => {
+          el.classList.add("visible");
+        });
+      });
+
+      // ============================
+      // NAVBAR LOGO HIDE ON SCROLL
+      // ============================
+      const navbarLogo = document.getElementById("navbar-logo");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 10) {
+          navbarLogo.classList.add("hidden");
+        } else {
+          navbarLogo.classList.remove("hidden");
+        }
+      });
+
+
+    </script>
+    
+<script>
+  // ============================
+  // DATA
+  // ============================
+  const cookiesData = [
+    {
+      name: "WIN CHEESE",
+      image: "CookingAssets/WinChessCookies.png",
+      alt: "Win Chess Cookies",
+      brand: "VILLA"
+    },
+    {
+      name: "DESERT NUT'S",
+      image: "CookingAssets/DesertNut'sCookies.png",
+      alt: "Desert Nuts Cookies",
+      brand: "VILLA"
+    },
+    {
+      name: "BLUE SHAMELESS",
+      image: "CookingAssets/BlueShamelessCookies.png",
+      alt: "Blue Shameless Cookies",
+      brand: "VILLA"
+    },
+    {
+      name: "WIN CHEESE",
+      image: "CookingAssets/WinChessCookies.png",
+      alt: "Win Chess Cookies",
+      brand: "VILLA"
+    },
+    {
+      name: "DESERT NUT'S",
+      image: "CookingAssets/DesertNut'sCookies.png",
+      alt: "Desert Nuts Cookies",
+      brand: "VILLA"
+    },
+    {
+      name: "BLUE SHAMELESS",
+      image: "CookingAssets/BlueShamelessCookies.png",
+      alt: "Blue Shameless Cookies",
+      brand: "VILLA"
+    },
+    {
+      name: "WIN CHEESE",
+      image: "CookingAssets/WinChessCookies.png",
+      alt: "Win Chess Cookies",
+      brand: "VILLA"
+    },
+    {
+      name: "DESERT NUT'S",
+      image: "CookingAssets/DesertNut'sCookies.png",
+      alt: "Desert Nuts Cookies",
+      brand: "VILLA"
+    },
+    {
+      name: "BLUE SHAMELESS",
+      image: "CookingAssets/BlueShamelessCookies.png",
+      alt: "Blue Shameless Cookies",
+      brand: "VILLA"
+    }
+  ];
+
+  const makersData = [
+    {
+      name: "RAMAH",
+      role: "Leader",
+      image: "CookingAssets/FotoRama-Leader.png",
+      alt: "Ramah"
+    },
+    {
+      name: "MARYAM",
+      role: "Co-Leader",
+      image: "CookingAssets/FotoMaryam-CoLeader.png",
+      alt: "Maryam"
+    },
+    {
+      name: "KANYA",
+      role: "Crewmember",
+      image: "CookingAssets/FotoKanya-Member.png",
+      alt: "Kanya"
+    },
+    {
+      name: "PAI",
+      role: "Crewmember",
+      image: "CookingAssets/FotoPai-Member.png",
+      alt: "Pai"
+    },
+    {
+      name: "FIRA",
+      role: "Crewmember",
+      image: "CookingAssets/FotoFira-Member.png",
+      alt: "Fira"
+    }
+  ];
+
+  // ============================
+  // PRODUCT CAROUSEL
+  // ============================
+const productTrack = document.getElementById("productTrack");
+  const productDots = document.getElementById("productDots");
+  const productPrev = document.getElementById("productPrev");
+  const productNext = document.getElementById("productNext");
+  const productViewport = document.querySelector(".product-viewport");
+
+  let currentIndex = 0;
+  const gap = 24;
+
+  function getVisibleCount() {
+    const w = window.innerWidth;
+    if (w <= 640) return 1;
+    if (w <= 1024) return 2;
+    return 3;
+  }
+
+  function getMaxIndex() {
+    const visibleCount = getVisibleCount();
+    return Math.max(0, cookiesData.length - visibleCount);
+  }
+
+  function renderCookies() {
+    productTrack.innerHTML = cookiesData
+      .map((item) => {
+        const formattedName = item.name.split(" ").join("<br>");
+        return `
+          <article class="cookie-card">
+            <div class="cookie-card-inner">
+              <img src="${item.image}" alt="${item.alt}" class="cookie-image" />
+              <h3 class="cookie-name">${formattedName}</h3>
+            </div>
+          </article>
+        `;
+      })
+      .join("");
+
+    renderDots();
+    applyCardWidth();
+    updateCarousel();
+  }
+
+  function renderDots() {
+    const maxIndex = getMaxIndex();
+    productDots.innerHTML = Array.from({ length: maxIndex + 1 }, (_, index) => {
+      return `<span data-index="${index}" class="${index === 0 ? "active" : ""}"></span>`;
+    }).join("");
+  }
+
+  function applyCardWidth() {
+    const visibleCount = getVisibleCount();
+    const viewportWidth = productViewport.clientWidth;
+    const cardWidth = (viewportWidth - (gap * (visibleCount - 1))) / visibleCount;
+
+    document.querySelectorAll(".cookie-card").forEach((card) => {
+      card.style.flex = `0 0 ${cardWidth}px`;
+    });
+  }
+
+  function updateCarousel() {
+    const visibleCount = getVisibleCount();
+    const maxIndex = getMaxIndex();
+
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+
+    const cards = document.querySelectorAll(".cookie-card");
+    if (!cards.length) return;
+
+    const cardWidth = cards[0].offsetWidth + gap;
+    productTrack.style.transform = `translateX(${-currentIndex * cardWidth}px)`;
+
+    document.querySelectorAll("#productDots span").forEach((dot, index) => {
+      dot.classList.toggle("active", index === currentIndex);
+    });
+  }
+
+  productPrev.addEventListener("click", () => {
+    currentIndex = Math.max(currentIndex - 1, 0);
+    updateCarousel();
+  });
+
+  productNext.addEventListener("click", () => {
+    currentIndex = Math.min(currentIndex + 1, getMaxIndex());
+    updateCarousel();
+  });
+
+  productDots.addEventListener("click", (e) => {
+    const dot = e.target.closest("span[data-index]");
+    if (!dot) return;
+    currentIndex = Number(dot.dataset.index);
+    updateCarousel();
+  });
+
+  window.addEventListener("resize", () => {
+    renderDots();
+    applyCardWidth();
+    updateCarousel();
+  });
+
+  renderCookies();
+  // ============================
+  // MAKERS GRID
+  // ============================
+  const makersGrid = document.getElementById("makersGrid");
+
+  function renderMakers() {
+    makersGrid.innerHTML = makersData
+      .map((item, index) => {
+        const delay = Math.min(index + 1, 5);
+        return `
+          <div class="mind-card reveal reveal-delay-${delay}">
+            <div class="mind-card-img">
+              <img src="${item.image}" alt="${item.alt}" />
+            </div>
+            <p class="mind-name">${item.name}</p>
+            <p class="mind-role">${item.role}</p>
+          </div>
+        `;
+      })
+      .join("");
+  }
+
+  renderCookies();
+  renderMakers();
+
+  document.querySelectorAll(".mind-card.reveal").forEach((el) => {
+  observer.observe(el);
+});
+</script>
+
+  </body>
+</html>
