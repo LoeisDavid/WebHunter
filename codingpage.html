@@ -7,6 +7,19 @@
     <link rel="stylesheet" href="codingpage.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      /* Card See Others yang sedang aktif */
+      .so-card--active {
+        outline: 3px solid #e53535;
+        outline-offset: 3px;
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(229, 53, 53, 0.25);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .so-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease, outline 0.3s ease;
+      }
+    </style>
   </head>
   <body>
 
@@ -15,7 +28,7 @@
     ============================== -->
     <nav class="navbar" id="navbar">
       <div class="navbar-logo" id="navbar-logo">
-        <img src="HomeAssets/Logo.png" alt="Hunter Community Logo" />
+        <img src="HomeAssets/components/Logo.png" alt="Hunter Community Logo" />
       </div>
       <ul class="navbar-links">
         <li><a href="homepage.html">Home</a></li>
@@ -35,17 +48,11 @@
           ACADEMY
         </h1>
         <p class="hero-description reveal reveal-delay-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.
+          Hunter Academy adalah inkubator teknis di Hunter yang berfokus pada transformasi kode menjadi karya nyata yang bermanfaat. Di sini, kami tidak hanya mengasah kemampuan pemrograman, tetapi juga menggabungkan aspek kreativitas dan pengembangan karakter agar setiap anggota memiliki identitas karya yang kuat. Program kami dirancang untuk membantu perkembangan bakat setiap individu melalui pengerjaan proyek yang terstruktur serta didokumentasikan secara rapi. Hasil dari proses ini kami tampilkan secara transparan kepada publik sebagai bukti nyata bahwa Hunter adalah wadah bagi mereka yang ingin terus berkembang dan membuktikan kompetensinya melalui pencapaian yang nyata.
         </p>
       </div>
       <div class="hero-image-wrapper reveal reveal-right reveal-delay-1">
-        <img src="CodingAssets/FotoBersamaCoding.png" alt="Hunter Academy" class="hero-image" />
+        <img src="CodingAssets/hero/FotoBersamaCoding.png" alt="Hunter Academy" class="hero-image" />
       </div>
     </section>
 
@@ -59,128 +66,35 @@
       <div class="adventure-cards">
         <div class="adventure-card reveal reveal-delay-1">
           <div class="card-label border-red">Materi <strong>database</strong> <em>coding class</em></div>
-          <img src="CodingAssets/FotoMateriCoding.png" alt="Materi Database Coding Class" />
+          <img src="CodingAssets/adventure/FotoMateriCoding.png" alt="Materi Database Coding Class" />
         </div>
         <div class="adventure-card reveal reveal-delay-2">
-          <img src="CodingAssets/FotoBrainstorming.png" alt="Brainstorming Materi Coding" />
+          <img src="CodingAssets/adventure/FotoBrainstorming.png" alt="Brainstorming Materi Coding" />
           <div class="card-label border-green"><em><strong>Brainstorming</strong></em> materi coding</div>
         </div>
         <div class="adventure-card reveal reveal-delay-3">
           <div class="card-label border-blue">Materi <em><strong>leadership</strong></em> Hunter 103</div>
-          <img src="CodingAssets/FotoMateriLeadership.png" alt="Materi Leadership Hunter 103" />
+          <img src="CodingAssets/adventure/FotoMateriLeadership.png" alt="Materi Leadership Hunter 103" />
         </div>
       </div>
     </section>
 
     <!-- ==============================
-         OUR PROJECT
+         OUR PROJECT  (rendered by JS)
     ============================== -->
-    <section class="our-project">
-      <div class="project-item" id="project-1">
-
-        <!-- LEFT -->
-        <div class="project-left">
-          <p class="project-section-label reveal">OUR <strong>PROJECT</strong></p>
-          <h2 class="project-title reveal reveal-delay-1">TOERAH<br><span>INVENTORY</span></h2>
-          <p class="project-desc reveal reveal-delay-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-            occaecat cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum.
-          </p>
-          <!-- See More: hover only, no action on click -->
-          <div class="project-seemore-wrap">
-            <button class="btn-seemore" tabindex="-1">
-              SEE MORE
-              <img src="CodingAssets/ArrowDown.png" alt="arrow down" class="arrow-icon" />
-            </button>
-          </div>
-        </div>
-
-        <!-- RIGHT -->
-        <div class="project-right reveal reveal-right reveal-delay-1">
-          <div class="project-main-img-wrap">
-            <div class="project-main-img-gradient"></div>
-            <img
-              src="CodingAssets/OurProjectHomePage.png"
-              alt="Toerah Inventory - Homepage"
-              class="project-main-img"
-              id="main-img-1"
-            />
-          </div>
-          <div class="project-tabs" id="tabs-1">
-            <div class="project-tab" onclick="switchTab(1,'CodingAssets/OurProjectLoginPage.png',this)">
-              <img src="CodingAssets/OurProjectLoginPage.png" alt="Login page" />
-              <span>Login page</span>
-            </div>
-            <div class="project-tab active" onclick="switchTab(1,'CodingAssets/OurProjectHomePage.png',this)">
-              <img src="CodingAssets/OurProjectHomePage.png" alt="Homepage" />
-              <span>Homepage</span>
-            </div>
-            <div class="project-tab" onclick="switchTab(1,'CodingAssets/OurProjectInventoryPage.png',this)">
-              <img src="CodingAssets/OurProjectInventoryPage.png" alt="Inventory page" />
-              <span>Inventory page</span>
-            </div>
-            <div class="project-tab" onclick="switchTab(1,'CodingAssets/OurProjectDetailItem.png',this)">
-              <img src="CodingAssets/OurProjectDetailItem.png" alt="Profile page" />
-              <span>Profile page</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
+    <section class="our-project" id="our-project-section">
+      <!-- injected by renderProjects() -->
     </section>
 
     <!-- ==============================
-         SEE OTHERS
+         SEE OTHERS  (rendered by JS)
     ============================== -->
-    <section class="see-others">
+    <section class="see-others" id="see-others-section">
       <h2 class="see-others-title reveal">
         <strong>SEE</strong> OTHERS
       </h2>
-
-      <div class="see-others-grid">
-
-        <!-- Card 1 -->
-        <div class="so-card reveal reveal-delay-1">
-          <div class="so-card-img">
-            <img src="CodingAssets/SahabatProperty.jpg" alt="Website Sahabat Property" />
-          </div>
-          <div class="so-card-body">
-            <h3>Website "Sahabat Property"</h3>
-            <p>Sahabat Property adalah platform digital yang dirancang untuk menjembatani calon pemilik hunian dengan properti impian mereka. Proyek ini memfokuskan pada penyampaian informasi yang transparan dan antarmuka yang ramah pengguna (user-friendly), memungkinkan pengunjung mengeksplorasi unit properti secara detail dan profesional.</p>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="so-card reveal reveal-delay-2">
-          <div class="so-card-img">
-            <img src="CodingAssets/OurProjectHomePage.png" alt="Website Toerah Inventory Management" />
-          </div>
-          <div class="so-card-body">
-            <h3>Website Toerah Inventory Management</h3>
-            <p>Toerah Inventory Management adalah solusi digital yang dirancang untuk menyederhanakan pelacakan stok dan pengelolaan aset secara real-time. Proyek ini fokus pada akurasi data dan kemudahan akses bagi pengguna untuk memastikan alur inventaris berjalan lancar, terorganisir, dan transparan.</p>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="so-card reveal reveal-delay-3">
-          <div class="so-card-img">
-            <img src="CodingAssets/Bomberman.jpeg" alt="Website Nama Project" />
-          </div>
-          <div class="so-card-body">
-            <h3>Website ( Nama Project )</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-          </div>
-        </div>
-
-        <!-- Slot 4 — kosong (spacer) -->
-        <div class="so-card-empty"></div>
-
+      <div class="see-others-grid" id="see-others-grid">
+        <!-- injected by renderSeeOthers() -->
       </div>
     </section>
 
@@ -198,7 +112,7 @@
         <!-- Row 1 -->
         <div class="mind-card reveal reveal-delay-1">
           <div class="mind-card-img">
-            <img src="CodingAssets/FotoFadhil-FrontendDeveloper.png" alt="Fadhl" />
+            <img src="CodingAssets/minds/FotoFadhil-FrontendDeveloper.png" alt="Fadhl" />
           </div>
           <p class="mind-name">FADHIL</p>
           <p class="mind-role">Frontend Developer</p>
@@ -206,7 +120,7 @@
 
         <div class="mind-card reveal reveal-delay-2">
           <div class="mind-card-img">
-            <img src="CodingAssets/FotoNabil-FrontendDeveloper.png" alt="Nabil" />
+            <img src="CodingAssets/minds/FotoNabil-FrontendDeveloper.png" alt="Nabil" />
           </div>
           <p class="mind-name">NABIL</p>
           <p class="mind-role">Frontend Developer</p>
@@ -214,7 +128,7 @@
 
         <div class="mind-card reveal reveal-delay-3">
           <div class="mind-card-img">
-            <img src="CodingAssets/FotoDavid-BackendDeveloper.png" alt="David" />
+            <img src="CodingAssets/minds/FotoDavid-BackendDeveloper.png" alt="David" />
           </div>
           <p class="mind-name">DAVID</p>
           <p class="mind-role">Backend Developer</p>
@@ -222,7 +136,7 @@
 
         <div class="mind-card reveal reveal-delay-4">
           <div class="mind-card-img">
-            <img src="CodingAssets/FotoNevil-ProjectManager.png" alt="Nevil" />
+            <img src="CodingAssets/minds/FotoNevil-ProjectManager.png" alt="Nevil" />
           </div>
           <p class="mind-name">NEVIL</p>
           <p class="mind-role">Project Manager</p>
@@ -230,93 +144,13 @@
 
         <div class="mind-card reveal reveal-delay-5">
           <div class="mind-card-img">
-            <img src="CodingAssets/FotoDzaki-DigitalMarketing.png" alt="Dzaki" />
+            <img src="CodingAssets/minds/FotoDzaki-DigitalMarketing.png" alt="Dzaki" />
           </div>
           <p class="mind-name">DZAKI</p>
           <p class="mind-role">Digital Marketing</p>
         </div>
 
-        <!-- Row 1 -->
-        <div class="mind-card reveal reveal-delay-1">
-          <div class="mind-card-img">
-            <img src="CodingAssets/FotoFadhil-FrontendDeveloper.png" alt="Fadhl" />
-          </div>
-          <p class="mind-name">FADHIL</p>
-          <p class="mind-role">Frontend Developer</p>
-        </div>
-
-        <div class="mind-card reveal reveal-delay-2">
-          <div class="mind-card-img">
-            <img src="CodingAssets/FotoNabil-FrontendDeveloper.png" alt="Nabil" />
-          </div>
-          <p class="mind-name">NABIL</p>
-          <p class="mind-role">Frontend Developer</p>
-        </div>
-
-        <div class="mind-card reveal reveal-delay-3">
-          <div class="mind-card-img">
-            <img src="CodingAssets/FotoDavid-BackendDeveloper.png" alt="David" />
-          </div>
-          <p class="mind-name">DAVID</p>
-          <p class="mind-role">Backend Developer</p>
-        </div>
-
-        <div class="mind-card reveal reveal-delay-4">
-          <div class="mind-card-img">
-            <img src="CodingAssets/FotoNevil-ProjectManager.png" alt="Nevil" />
-          </div>
-          <p class="mind-name">NEVIL</p>
-          <p class="mind-role">Project Manager</p>
-        </div>
-
-        <div class="mind-card reveal reveal-delay-5">
-          <div class="mind-card-img">
-            <img src="CodingAssets/FotoDzaki-DigitalMarketing.png" alt="Dzaki" />
-          </div>
-          <p class="mind-name">DZAKI</p>
-          <p class="mind-role">Digital Marketing</p>
-        </div>
-
-        <!-- Row 1 -->
-        <div class="mind-card reveal reveal-delay-1">
-          <div class="mind-card-img">
-            <img src="CodingAssets/FotoFadhil-FrontendDeveloper.png" alt="Fadhl" />
-          </div>
-          <p class="mind-name">FADHIL</p>
-          <p class="mind-role">Frontend Developer</p>
-        </div>
-
-        <div class="mind-card reveal reveal-delay-2">
-          <div class="mind-card-img">
-            <img src="CodingAssets/FotoNabil-FrontendDeveloper.png" alt="Nabil" />
-          </div>
-          <p class="mind-name">NABIL</p>
-          <p class="mind-role">Frontend Developer</p>
-        </div>
-
-        <div class="mind-card reveal reveal-delay-3">
-          <div class="mind-card-img">
-            <img src="CodingAssets/FotoDavid-BackendDeveloper.png" alt="David" />
-          </div>
-          <p class="mind-name">DAVID</p>
-          <p class="mind-role">Backend Developer</p>
-        </div>
-
-        <div class="mind-card reveal reveal-delay-4">
-          <div class="mind-card-img">
-            <img src="CodingAssets/FotoNevil-ProjectManager.png" alt="Nevil" />
-          </div>
-          <p class="mind-name">NEVIL</p>
-          <p class="mind-role">Project Manager</p>
-        </div>
-
-        <div class="mind-card reveal reveal-delay-5">
-          <div class="mind-card-img">
-            <img src="CodingAssets/FotoDzaki-DigitalMarketing.png" alt="Dzaki" />
-          </div>
-          <p class="mind-name">DZAKI</p>
-          <p class="mind-role">Digital Marketing</p>
-        </div>
+        
 
       </div>
     </section>
@@ -325,63 +159,261 @@
          FOOTER
     ============================== -->
     <footer class="footer">
-      <img src="CodingAssets/Logo3.png" alt="Hunter Community" class="reveal reveal-delay-2"/>
-      <div class="footer-inner">
-        <h2 class="reveal reveal-delay-1">Let's Build it Together.</h2>
-        <div class="footer-inner-content">
-          <div class="footer-visitus">
-            <h4 class="reveal reveal-delay-3">Visit Us</h4>
-            <p class="reveal reveal-delay-4">Wonorejo Permai Utara <br>VII Blok BB no.423 <br>Surabaya</p>
-          </div>
-          <div class="footer-contact">
-            <h4 class="reveal reveal-delay-3">Contact</h4>
-            <div class="contact-sosmed">
-              <img src="CodingAssets/WhatsAppIcon.png" alt="WhatsApp" class="reveal reveal-delay-4">
-              <div class="contact reveal reveal-delay-5">
-                <p>929-6000 ( Hunter Community )</p>
-                <p>929-6000 ( Villa Cookies )</p>
-              </div>
+        <!-- Logo -->
+          <img src="HomeAssets/components/Logo3.png" alt="Hunter Community" class="reveal reveal-delay-2"/>
+
+        <div class="footer-inner">
+          <h2 class="reveal reveal-delay-1">Let's Build it Together.</h2>
+          <div class="footer-inner-content">
+            <div class="footer-visitus">
+              <h4 class="reveal reveal-delay-3">Visit Us</h4>
+              <p class="reveal reveal-delay-4">Wonorejo Permai Utara <br>VII Blok BB no.423 <br>Surabaya</p>
             </div>
-            <div class="contact-sosmed">
-              <img src="CodingAssets/InstagramIcon.png" alt="Instagram" class="reveal reveal-delay-4">
-              <div class="contact reveal reveal-delay-5">
-                <p>huntercommunity_</p>
-                <p>villacookies</p>
+            <div class="footer-contact">
+              <h4 class="reveal reveal-delay-3">Contact</h4>
+              <div class="contact-sosmed">
+                <img src="HomeAssets/components/WhatsAppIcon.png" alt="WhatsApp" class="reveal reveal-delay-4">
+                <div class="contact reveal reveal-delay-5">
+                  <p>+62 881-0268-77983 ( Hunter Academy )</p>
+                  <p>+62 813-3751-6520 ( Hunter Entrepreneur )</p>
+                </div>
+              </div>
+              <div class="contact-sosmed">
+                <img src="HomeAssets/components/InstagramIcon.png" alt="Instagram" class="reveal reveal-delay-4">
+                <div class="contact reveal reveal-delay-5">
+                  <p>huntercommunity_</p>
+                  <p>villacookies</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
     </footer>
 
     <script>
-      // ── Scroll reveal ──
-      const reveals = document.querySelectorAll('.reveal');
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add('visible');
+      // ============================================================
+      //  DATA — Edit / tambah project di sini
+      // ============================================================
+      /**
+       * Satu array "projects" untuk semua data.
+       * Tiap project muncul di:
+       *   - section "OUR PROJECT" (judul, deskripsi, tab gambar)
+       *   - card "SEE OTHERS"     (thumbnail, judul card, deskripsi singkat)
+       *
+       * Klik card See Others → Our Project berubah ke project itu + scroll ke atas.
+       *
+       * Field:
+       *   titleLine1 / titleLine2 — judul dua baris Our Project (titleLine2 boleh '')
+       *   desc        — deskripsi panjang Our Project
+       *   tabs        — [{ src, label }]  tab gambar; tabs[0] = gambar utama default
+       *   cardTitle   — judul di card See Others
+       *   cardImg     — thumbnail See Others (default: tabs[0].src)
+       *   cardAlt     — alt text thumbnail
+       *   cardDesc    — deskripsi singkat di card See Others
+       */
+      const projects = [
+        {
+          titleLine1: 'TOERAH',
+          titleLine2: 'INVENTORY',
+          desc: 'Toerah Inventory Management adalah solusi digital komprehensif yang dirancang khusus untuk menyederhanakan pelacakan stok barang dan pengelolaan aset secara real-time. Platform ini dilengkapi dengan antarmuka yang intuitif, pencatatan riwayat transaksi yang akurat, serta dasbor analitik interaktif guna mendukung efisiensi operasional dan pengambilan keputusan bisnis yang lebih cepat dan tepat.',
+          tabs: [
+            { src: 'CodingAssets/projects/OurProjectHomePage.png',      label: 'Homepage'       },
+            { src: 'CodingAssets/projects/OurProjectLoginPage.png',     label: 'Login page'     },
+            { src: 'CodingAssets/projects/OurProjectInventoryPage.png', label: 'Inventory page' },
+            { src: 'CodingAssets/projects/OurProjectDetailItem.png',    label: 'Profile page'   },
+          ],
+          cardTitle: 'Website Toerah Inventory Management',
+          cardImg:   'CodingAssets/projects/OurProjectHomePage.png',
+          cardAlt:   'Website Toerah Inventory Management',
+          cardDesc:  'Toerah Inventory Management adalah solusi digital yang dirancang untuk menyederhanakan pelacakan stok dan pengelolaan aset secara real-time.',
+        },
+        {
+          titleLine1: 'SAHABAT',
+          titleLine2: 'PROPERTY',
+          desc: 'Sahabat Property adalah platform digital yang dirancang untuk menjembatani calon pemilik hunian dengan properti impian mereka. Proyek ini memfokuskan pada penyampaian informasi yang transparan dan antarmuka yang ramah pengguna (user-friendly), memungkinkan pengunjung mengeksplorasi unit properti secara detail dan profesional.',
+          tabs: [
+            { src: 'CodingAssets/projects/SahabatProperty.jpg', label: 'Landing Page' },
+            { src: 'CodingAssets/projects/Homepage2.jpg', label: 'Home Page' },
+            { src: 'CodingAssets/projects/Gallery-page.jpg', label: 'Galery Page' },
+            { src: 'CodingAssets/projects/Detail-property-page.jpg', label: 'Detail Page' },
+            { src: 'CodingAssets/projects/Detail-property-page2.jpg', label: 'Detail Page' },
+          ],
+          cardTitle: 'Website "Sahabat Property"',
+          cardImg:   'CodingAssets/projects/SahabatProperty.jpg',
+          cardAlt:   'Website Sahabat Property',
+          cardDesc:  'Platform digital yang menjembatani calon pemilik hunian dengan properti impian mereka, dengan informasi transparan dan antarmuka yang ramah pengguna.',
+        },
+        {
+          titleLine1: 'GAME',
+          titleLine2: 'BOMBERMAN',
+          desc: 'Game Bomberman adalah adaptasi modern dari permainan arkade klasik yang dikembangkan dengan mekanika gameplay yang dinamis dan seru. Pemain ditantang untuk menavigasi labirin, menempatkan bom secara strategis untuk menghancurkan rintangan, dan mengalahkan lawan. Proyek ini menonjolkan penerapan logika pemrograman yang solid, desain peta yang menantang, serta antarmuka menu yang interaktif untuk memberikan pengalaman bermain yang imersif.',
+          tabs: [
+            { src: 'CodingAssets/projects/Bomberman.jpeg', label: 'Menu Page' },
+            { src: 'CodingAssets/projects/settings.jpeg', label: 'Setting Page' },
+            { src: 'CodingAssets/projects/map.jpeg', label: 'Map' },
+            { src: 'CodingAssets/projects/gameplay.jpeg', label: 'Gameplay Page' },
+            { src: 'CodingAssets/projects/loading.jpeg', label: 'loading Page' },
+          ],
+          cardTitle: 'Game BomberMan',
+          cardImg:   'CodingAssets/projects/Bomberman.jpeg',
+          cardAlt:   'Game BomberMan',
+          cardDesc:  'Adaptasi modern dari permainan arkade klasik dengan mekanika gameplay dinamis, menantang pemain menavigasi labirin dan menempatkan bom secara strategis.',
+        },
+        
+
+        // ── Tambah project baru di sini ──────────────────────────
+        // {
+        //   titleLine1: 'NAMA',
+        //   titleLine2: 'BARU',
+        //   desc: 'Deskripsi panjang...',
+        //   tabs: [
+        //     { src: 'CodingAssets/GambarUtama.png', label: 'Main Page' },
+        //   ],
+        //   cardTitle: 'Website Nama Baru',
+        //   cardImg:   'CodingAssets/GambarUtama.png',
+        //   cardAlt:   'Website Nama Baru',
+        //   cardDesc:  'Deskripsi singkat untuk card.',
+        // },
+      ];
+
+      // ── state ────────────────────────────────────────────────────
+      let activeIdx = 0;
+
+      // ============================================================
+      //  RENDER — Our Project (satu project sekaligus)
+      // ============================================================
+      function renderActiveProject(idx) {
+        const proj = projects[idx];
+        const section = document.getElementById('our-project-section');
+
+        const tabsHTML = proj.tabs.map((tab, ti) => `
+          <div class="project-tab${ti === 0 ? ' active' : ''}"
+               onclick="switchTab('${tab.src}', this)">
+            <img src="${tab.src}" alt="${tab.label}" />
+            <span>${tab.label}</span>
+          </div>
+        `).join('');
+
+        section.innerHTML = `
+          <div class="project-item" id="project-active">
+            <div class="project-left">
+              <p class="project-section-label reveal visible">OUR <strong>PROJECT</strong></p>
+              <h2 class="project-title reveal visible reveal-delay-1">
+                ${proj.titleLine1}${proj.titleLine2 ? `<br><span>${proj.titleLine2}</span>` : ''}
+              </h2>
+              <p class="project-desc reveal visible reveal-delay-2">${proj.desc}</p>
+              <div class="project-seemore-wrap">
+                <button class="btn-seemore" tabindex="-1" onclick="document.getElementById('see-others-section').scrollIntoView({ behavior: 'smooth', block: 'start' })">
+                  SEE MORE
+                  <img src="CodingAssets/components/ArrowDown.png" alt="arrow down" class="arrow-icon" />
+                </button>
+              </div>
+            </div>
+            <div class="project-right reveal visible reveal-right reveal-delay-1">
+              <div class="project-main-img-wrap">
+                <div class="project-main-img-gradient"></div>
+                <img
+                  src="${proj.tabs[0].src}"
+                  alt="${proj.titleLine1} - ${proj.tabs[0].label}"
+                  class="project-main-img"
+                  id="main-project-img"
+                />
+              </div>
+              <div class="project-tabs" id="active-tabs">
+                ${tabsHTML}
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      // ============================================================
+      //  RENDER — See Others
+      // ============================================================
+      function renderSeeOthers() {
+        const grid = document.getElementById('see-others-grid');
+        grid.innerHTML = '';
+        const delays = ['reveal-delay-1','reveal-delay-2','reveal-delay-3','reveal-delay-4','reveal-delay-5'];
+
+        projects.forEach((proj, idx) => {
+          const delay = delays[idx % delays.length];
+          const img   = proj.cardImg || proj.tabs[0].src;
+          const isActive = idx === activeIdx ? ' so-card--active' : '';
+          const html = `
+            <div class="so-card${isActive} reveal ${delay}"
+                 onclick="selectProject(${idx})"
+                 style="cursor:pointer">
+              <div class="so-card-img">
+                <img src="${img}" alt="${proj.cardAlt}" />
+              </div>
+              <div class="so-card-body">
+                <h3>${proj.cardTitle}</h3>
+                <p>${proj.cardDesc}</p>
+              </div>
+            </div>
+          `;
+          grid.insertAdjacentHTML('beforeend', html);
         });
-      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-      reveals.forEach((el) => revealObserver.observe(el));
+
+        if (projects.length % 2 !== 0) {
+          grid.insertAdjacentHTML('beforeend', '<div class="so-card-empty"></div>');
+        }
+      }
+
+      // ============================================================
+      //  SELECT PROJECT — dipanggil saat card See Others diklik
+      // ============================================================
+      function selectProject(idx) {
+        activeIdx = idx;
+
+        // Update Our Project section
+        renderActiveProject(idx);
+
+        // Update highlight card aktif
+        document.querySelectorAll('.so-card').forEach((c, i) => {
+          c.classList.toggle('so-card--active', i === idx);
+        });
+
+        // Scroll ke Our Project section
+        document.getElementById('our-project-section')
+          .scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      // ============================================================
+      //  TAB SWITCHER (dalam satu project aktif)
+      // ============================================================
+      function switchTab(imgSrc, clickedTab) {
+        document.getElementById('main-project-img').src = imgSrc;
+        document.querySelectorAll('#active-tabs .project-tab')
+          .forEach(t => t.classList.remove('active'));
+        clickedTab.classList.add('active');
+      }
+
+      // ============================================================
+      //  INIT
+      // ============================================================
+      renderActiveProject(activeIdx);
+      renderSeeOthers();
+
+      // ── Scroll reveal ──
+      function initReveal() {
+        const reveals = document.querySelectorAll('.reveal:not(.visible)');
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        reveals.forEach(el => obs.observe(el));
+      }
+      initReveal();
 
       window.addEventListener('load', () => {
-        document.querySelectorAll('.hero .reveal').forEach((el) => el.classList.add('visible'));
+        document.querySelectorAll('.hero .reveal').forEach(el => el.classList.add('visible'));
       });
 
       // ── Navbar logo hide on scroll ──
       const navbarLogo = document.getElementById('navbar-logo');
       window.addEventListener('scroll', () => {
-        if (window.scrollY > 10) navbarLogo.classList.add('hidden');
-        else navbarLogo.classList.remove('hidden');
+        navbarLogo.classList.toggle('hidden', window.scrollY > 10);
       });
-
-      // ── Tab switcher ──
-      function switchTab(projectId, imgSrc, clickedTab) {
-        document.getElementById('main-img-' + projectId).src = imgSrc;
-        document.querySelectorAll('#tabs-' + projectId + ' .project-tab')
-          .forEach(t => t.classList.remove('active'));
-        clickedTab.classList.add('active');
-      }
     </script>
 
   </body>
