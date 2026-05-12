@@ -925,26 +925,30 @@ a {
     font-size: 19px;
     letter-spacing: 0.04em;
   }
-  .carousel-arrow {
-    padding: 0 10px;
+  .carousel-arrow,
+  .carousel-dots {
+    display: none !important;
   }
-  .carousel-arrow img {
-    width: 20px;
+  .carousel-track-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
   }
   .carousel-track {
+    justify-content: flex-start;
     gap: 16px;
+    width: max-content;
+    padding: 0 10px;
   }
   .carousel-item {
-    flex: 0 0 250px;
-    width: 250px;
+    flex: 0 0 260px;
+    width: 260px;
+    scroll-snap-align: center;
   }
   .carousel-item img {
     height: 320px;
     border-radius: 14px;
-  }
-  .carousel-dot {
-    width: 9px;
-    height: 9px;
   }
 
   /* ── ACTIVITIES ── */
@@ -964,8 +968,11 @@ a {
   .activities-card {
     width: 100%;
     gap: 16px;
+    display: flex;
+    flex-direction: column;
   }
   .card-label {
+    order: -1;
     font-size: 15px;
     padding: 14px 16px;
     line-height: 1.5;

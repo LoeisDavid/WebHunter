@@ -1352,4 +1352,7 @@ a {
     width: 38px;
     height: 38px;
   }
+  .hide-on-mobile {
+    display: none !important;
+  }
 }
