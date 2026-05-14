@@ -53,6 +53,26 @@ body {
   overflow-x: hidden;
 }
 
+/* ========================================
+   PAGE WRAPPER — keeps content centered at any zoom level
+======================================== */
+body > * {
+  width: 100%;
+}
+
+.navbar,
+.hero,
+.about,
+.core-values,
+.division-coding,
+.division-cooking,
+.founder,
+.footer {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -188,7 +208,9 @@ a {
    HERO SECTION
 ======================================== */
 .hero {
-  margin: 100px;
+  margin: 100px auto;
+  padding: 0 100px;
+  max-width: 1600px;
   display: flex;
   align-items: center;
   gap: 0;
@@ -897,7 +919,8 @@ a {
   }
 
   .hero {
-    margin: 60px 40px;
+    margin: 60px auto;
+    padding: 0 40px;
     flex-direction: column;
     gap: 40px;
   }
@@ -1074,8 +1097,10 @@ a {
   /* ── HERO ── */
   .hero {
     flex-direction: column;
-    margin: 0 16px;
-    margin-top: calc(60px + 56px + 10px + 28px);
+    margin: 0 auto;
+    padding: 0 16px;
+    padding-top: calc(60px + 56px + 10px + 28px);
+    max-width: 100%;
     gap: 28px;
   }
   .hero-title {

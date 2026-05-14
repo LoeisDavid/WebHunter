@@ -53,6 +53,25 @@ body {
   overflow-x: hidden;
 }
 
+/* ========================================
+   PAGE WRAPPER — keeps content centered at any zoom level
+======================================== */
+body > * {
+  width: 100%;
+}
+
+.navbar,
+.hero,
+.adventure,
+.our-project,
+.see-others,
+.the-minds,
+.footer {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -1002,6 +1021,8 @@ a {
     padding: 32px 20px 56px;
     padding-top: calc(60px + 56px + 10px + 32px);
     gap: 32px;
+    max-width: 100%;
+    margin: 0 auto;
   }
   .hero-tag {
     font-size: 15px;
